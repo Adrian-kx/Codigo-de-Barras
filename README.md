@@ -1,6 +1,6 @@
 # Gerador de Codigo de Barras
 
-* Gerador de Cdigo de Barras utilizando JsBarcode
+* Gerador de Código de Barras utilizando JsBarcode
 ## Características
 
  * Este projeto foi feito utilizando uma biblioteca de Javascript (JsBarCode v3.6.0),e consegue gerar mais de 10 tipos de Codigos de barras diferentes.
