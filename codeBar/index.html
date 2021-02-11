@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de Barras</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+
+        <div class="container-fluid">
+            <h1>Gerador de Código de Barras</h1>
+            <div class="row">
+                <select v-model="tipo" class="form-select form-select-sm mb-4" aria-label=".form-select-sm">
+                    <option value="" selected>Selecionar tipo de Barra</option>
+                    <option>CODE128</option>
+                    <option>EAN-13</option>
+                    <option>EAN-8</option>
+                    <option>CODE39</option>
+                    <option>ITF-14</option>
+                    <option>MSI10</option>
+                    <option>MSI11</option>
+                    <option>MSI1011</option>
+                    <option>MSI1011</option>
+                    <option>pharmacode</option>
+                    <option>codabar</option>
+                </select>
+                <input type="text" class="form-control" placeholder="Digite para gerar..."  v-model="text">
+            </div>
+            <div class="row">
+
+                <svg v-if="a == true" id="barcode"></svg>
+                <svg v-if="a == false" class="barcode" jsbarcode-format="upc" :jsbarcode-value="text"
+                    jsbarcode-textmargin="0" jsbarcode-fontoptions="bold">
+                </svg>
+
+
+                <button class="btn mt-3 btn-primary" @click="gerarBarra">Gerar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+
+
+
+
+</body>
+
+</html>

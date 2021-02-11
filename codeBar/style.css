@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+    background-image: linear-gradient(to top left, #00d5ffa6, #090979ce, #020024d5);
+    background-attachment: fixed;
+}
+
+.row {
+    margin: 10px auto;
+}
+
+h1 {
+    margin: 35px;
+}
+
+input {
+    width: 270px !important;
+    font-size: 2em;
+    margin: 10px;
+    margin: auto;
+}
+
+.btn {
+    width: 100px !important;
+    margin: auto;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.form-select {
+    width: 250px !important;
+    margin: auto;
+}
+
+svg {
+    width: 300px;
+    height: 300px;
+}
+
+#barcode {
+    margin: 4px auto 20px auto;
+    border: 1px solid #222;
+    padding: 30px 15px;
+    background-color: #0006;
+}
